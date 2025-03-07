@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Inter";
+  src: url("../public/fonts/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+.section {
+  @apply sticky font-bold top-0 py-10 px-1 text-gray-600 text-2xl;
+}
+
+.dark-mode {
+  @apply bg-primary font-inter text-white px-5 select-none;
+}
+
+.light-mode {
+  @apply bg-gray-50 font-inter text-gray-600 px-5 select-none;
+}
