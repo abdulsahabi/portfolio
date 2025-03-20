@@ -3,6 +3,10 @@ var darkBtn = document.querySelector("#dark-mode");
 var lightBtn = document.querySelector("#light-mode");
 var body = document.querySelector("body");
 var menuBtn = document.querySelector("#menu");
+var closeBtn = document.querySelector("#close");
+var sidebar = document.querySelector("#sidebar");
+var myImage = document.querySelector("#my-image") ||
+    null;
 var isDark = localStorage.getItem("theme");
 if (isDark === null || isDark == "dark") {
     document.documentElement.classList.toggle("dark");
@@ -26,8 +30,21 @@ if (darkBtn && lightBtn) {
         localStorage.setItem("theme", "light");
     });
 }
-if (menuBtn) {
+if (menuBtn && sidebar && closeBtn) {
     menuBtn.addEventListener("click", function (e) {
-        console.log("You clicked me!!");
+        sidebar === null || sidebar === void 0 ? void 0 : sidebar.classList.toggle("hidden");
+    });
+    closeBtn.addEventListener("click", function (e) {
+        sidebar === null || sidebar === void 0 ? void 0 : sidebar.classList.toggle("hidden");
+    });
+}
+if (myImage) {
+    myImage.addEventListener("mouseenter", function () {
+        if (document.documentElement.classList.contains("dark")) {
+            myImage.src = "./public/assets/my image 1.jpg";
+        }
+    });
+    myImage.addEventListener("mouseleave", function () {
+        myImage.src = "./public/assets/my image 2.jpg";
     });
 }
