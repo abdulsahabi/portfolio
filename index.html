@@ -1,251 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="public/css/global.css" />
-
-    <title>Personal website</title>
+    <title>Abdulrahaman Sahabi | Full-Stack Developer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      body.noscroll {
+        overflow: hidden;
+      }
+    </style>
   </head>
-  <body
-    class="bg-stone-50 relative dark:bg-primary select-none dark:text-gray-300 text-gray-600 text-[14px]"
-  >
-    <header
-      class="sticky top-0 left-0 backdrop-blur-sm right-0 h-[50px] px-6 py-1 w-full flex items-center justify-between"
-    >
-      <button
-        id="menu"
-        class="dark:hover:bg-stone-600 hover:bg-stone-200 transform duration-500 cursor-pointer p-1 hover:rounded-lg"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-5"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M3.75 6.75h16.5M3.75 12H12m-8.25 5.25h16.5"
-          />
-        </svg>
+  <body class="bg-stone-50 dark:bg-primary dark:text-gray-300 text-gray-600 text-sm">
+    <header class="sticky top-0 z-50 w-full h-[50px] px-6 py-1 flex items-center justify-between backdrop-blur-sm">
+      <button id="menu" class="dark:hover:bg-stone-600 hover:bg-stone-200 p-1 rounded transition">
+        <i data-lucide="menu" class="w-5 h-5"></i>
       </button>
-      <div>
-        <div class="flex gap-3 items-center">
-          <button
-            id="light-mode"
-            class="dark:hover:bg-stone-600 hover:bg-stone-200 transform duration-500 cursor-pointer p-1 hover:rounded-lg"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-5"
-            >
-              <path
-                d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"
-              />
-            </svg>
-          </button>
-          <button
-            id="dark-mode"
-            class="dark:hover:bg-stone-600 hidden hover:bg-stone-200 transform duration-500 cursor-pointer p-1 hover:rounded-lg"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="size-4"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </button>
-          <div>|</div>
-          <button
-            class="text-sm dark:hover:text-gray-600 py-1 px-2 hover:text-gray-400 rounded-md text-gray-500 font-mono"
-          >
-            <a
-              href="mailto:asahabi.developer@gmail.com?subject=Hiring Inquiry&bodt=Hello, I would like to discuss a project with you."
-              >Hire me</a
-            >
-          </button>
-        </div>
+      <div class="flex gap-3 items-center">
+        <button id="light-mode" class="dark:hover:bg-stone-600 hover:bg-stone-200 p-1 rounded transition">
+          <i data-lucide="sun" class="w-5 h-5"></i>
+        </button>
+        <button id="dark-mode" class="dark:hover:bg-stone-600 hover:bg-stone-200 p-1 rounded transition hidden">
+          <i data-lucide="moon" class="w-5 h-5"></i>
+        </button>
+        <span>|</span>
+        <a href="mailto:asahabi.developer@gmail.com?subject=Hiring Inquiry" class="text-gray-500 hover:text-gray-700 font-mono text-sm">Hire Me</a>
       </div>
-    </header>
+    </header><!-- Sidebar -->
+<div id="sidebar" class="fixed inset-0 hidden bg-black bg-opacity-60 z-50">
+  <div class="w-full h-full flex justify-center items-center">
+    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl w-[90%] max-w-md text-center">
+      <button id="close" class="text-gray-500 hover:text-red-500 flex justify-end w-full">
+        <i data-lucide="x" class="w-6 h-6"></i>
+      </button>
+      <ul class="mt-6 space-y-4">
+        <li><a href="#" class="text-lg font-bold">My Resume</a></li>
+        <li><a href="#projects" class="text-lg font-bold">Projects</a></li>
+        <li><a href="#contact" class="text-lg font-bold">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-    <div
-      id="sidebar"
-      class="hidden w-full h-full backdrop-blur-md fixed inset-0 z-10"
-    >
-      <div class="max-w-[500px] m-auto p-2">
-        <div class="w-full mt-1 py-2 px-4 flex justify-end">
-          <button
-            id="close"
-            class="select-none hover:text-gray-500 transform duration-150 py-1 px-1 font-mono font-bold flex items-center gap-1"
-          >
-            <span>Close</span>
-            <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-5"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </span>
-          </button>
-        </div>
-        <div class="w-full py-2 px-4 h-[300px] mt-5 text-center">
-          <ul>
-            <li>
-              <a href="#" class="font-inter text-2xl font-bold duration-500"
-                >My Resume</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<!-- Hero Section -->
+<section class="max-w-[600px] mx-auto my-10 p-4 text-center">
+  <h1 class="text-3xl font-bold text-gray-800 dark:text-white">Abdulrahaman Sahabi</h1>
+  <p class="text-red-500 font-semibold">Full-Stack Developer</p>
+  <div class="mt-4 w-48 h-48 mx-auto rounded-full overflow-hidden">
+    <img src="./public/assets/my image 2.jpg" alt="My image" class="object-cover w-full h-full" />
+  </div>
+</section>
 
-    <div class="max-w-[600px] m-auto my-10 p-2">
-      <div class="font-bold text-3xl dark:text-gray-50 text-gray-700">
-        Abdulrahaman Sahabi
-      </div>
-      <div class="text-[14px] font-semibold mt-1 dark:text-red-200">
-        Full-Stack Developer
-      </div>
-      <div
-        class="max-w-[300px] overflow-hidden bg-white m-auto my-4 h-[340px] rounded-3xl"
-      >
-        <img
-          src="./public/assets/my image 2.jpg"
-          alt="My image"
-          id="my-image"
-        />
-      </div>
-    </div>
+<!-- About Section -->
+<section class="max-w-[600px] mx-auto px-4 mb-10">
+  <h2 class="text-xl font-bold mb-2">About</h2>
+  <p class="leading-6">
+    I’m a <strong>Full-Stack Developer</strong> passionate about transforming ideas into <strong>fast, user-friendly, and secure web applications</strong> using <strong>JavaScript, TypeScript, PHP, Next.js, Laravel, React, and Node.js</strong>.
+    I specialize in crafting smooth front-end interfaces with <strong>TailwindCSS</strong> and powerful back-ends with <strong>MySQL, MongoDB, and API integrations</strong>.
+    Let’s create something awesome together!
+  </p>
+</section>
 
-    <div
-      class="text-[20px] p-2 pl-4 flex items-center font-bold w-full h-[50px] sticky top-0 left-0 z-0 backdrop-blur-md"
-    >
-      About
+<!-- Experience Section -->
+<section class="max-w-[600px] mx-auto px-4 mb-10">
+  <h2 class="text-xl font-bold mb-2">Experience</h2>
+  <div class="space-y-6">
+    <div>
+      <h3 class="font-bold">Full-Stack Developer – Personal Projects</h3>
+      <p class="text-xs">Remote | 2024 - Present</p>
+      <p>Built full-stack systems using Laravel, Next.js, Node.js, and TailwindCSS with clean and functional UI/UX.</p>
     </div>
-    <div class="max-w-[400px] m-auto px-4 mb-4">
-      Hey there! I’m a
-      <span class="font-semibold">Full-Stack Developer</span> who loves turning
-      ideas into
-      <span class="font-semibold"
-        >real, working web applications. I work with JavaScript, TypeScript, and
-        PHP,</span
-      >
-      using
-      <span class="font-semibold">Next.js, React.js, Laravel, and Node.js</span>
-      to build websites and apps that are
-      <span class="font-semibold"
-        >fast, user-friendly, and actually useful.</span
-      ><br />
-      <br />
-      I enjoy both
-      <span class="font-semibold">front-end and back-end development</span>
-      whether it’s making sure a website looks good with TailwindCSS or handling
-      data and logic with
-      <span class="font-semibold">MySQL and MongoDB.</span> I also work with
-      <span class="font-semibold">RESTful APIs and JWT authentication</span> to
-      keep things <span class="font-bold">secure and efficient.</span
-      ><br /><br />I’m always excited to build, learn, and collaborate, so let’s
-      create something awesome together!
+    <div>
+      <h3 class="font-bold">Developer – InoGr Technologies</h3>
+      <p class="text-xs">Remote | 2024 - Present</p>
+      <p>Contributed to internal tools and student apps like CGPA Tracker, improving functionality and performance.</p>
     </div>
+    <div>
+      <h3 class="font-bold">Mentor – WUFP/BK</h3>
+      <p class="text-xs">Nigeria | National Diploma Period</p>
+      <p>Guided colleagues with debugging and coding best practices while simplifying complex programming topics.</p>
+    </div>
+  </div>
+</section>
 
-    <div
-      class="text-[20px] p-2 px-4 flex items-center font-bold w-full h-[50px] sticky top-0 left-0 backdrop-blur-md"
-    >
-      Experience
-    </div>
-    <div class="flex flex-col gap-2 mb-4 max-w-[400px] m-auto px-4">
-      <div class="flex flex-col gap-2 mb-3">
-        <div class="font-bold">
-          Full-Stack Developer <span class="text-[12px]"></span>(Personal
-          Projects & Freelance Work)
-        </div>
-        <div>📍 Remote | (2024 - Present)</div>
-        <p>
-          I love
-          <span class="font-semibold"
-            >building things that work and look great.</span
-          >
-          From designing smooth
-          <span class="font-semibold">front-end interfaces</span> with
-          <span class="font-semibold">Next.js, React, and TailwindCSS</span> to
-          making sure the
-          <span class="font-semibold">back-end logic</span> (Laravel, Node.js,
-          PHP) runs <span class="font-semibold">>without breaking</span>, I
-          enjoy every step of the process.
-        </p>
-      </div>
-      <div class="flex flex-col gap-2 mb-3">
-        <div class="font-bold">
-          Full-Stack Developer <span class="text-[12px]"></span>(Personal –
-          InoGr
-        </div>
-        <div>📍 Remote | Part-time (2024 - Present)</div>
-        <p>
-          Developed
-          <span class="font-semibold">end-to-end web applications</span> using
-          <span class="font-semibold"
-            >Next.js, React.js, Laravel, and Node.js.</span
-          >
-          And I also collaborated with the team to build efficient,
-          user-friendly software solutions.
-        </p>
-      </div>
-      <div class="flex flex-col gap-2 mb-3">
-        <div class="font-bold">
-          Software Mentor & Developer –
-          <span class="text-[12px]">WUFP/BK (Undergraduate Experience)</span>
-        </div>
-        <div>📍 Nigeria | (During National Diploma)</div>
-        <p>
-          Helped colleagues debug, optimize, and develop software projects,
-          improving their coding skills. Provided one-on-one and group teaching
-          sessions, explaining complex programming concepts in simple terms.
-        </p>
+<!-- Projects Section -->
+<section id="projects" class="max-w-[600px] mx-auto px-4 mb-10">
+  <h2 class="text-xl font-bold mb-2">Projects</h2>
+  <div class="space-y-4">
+    <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+      <h3 class="font-semibold">FUBK CGPA Tracker</h3>
+      <p class="text-sm">Web and mobile app for tracking CGPA, simulating grades, and comparing progress. Built with PHP, MySQL, TailwindCSS.</p>
+      <div class="mt-2 text-xs text-blue-500 flex gap-4">
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Live Demo</a>
       </div>
     </div>
+    <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
+      <h3 class="font-semibold">Student Admission Portal</h3>
+      <p class="text-sm">Dynamic portal for handling student admissions, admin dashboards, and secure OTP login. Built with PHP, JS, and Tailwind.</p>
+      <div class="mt-2 text-xs text-blue-500 flex gap-4">
+        <a href="#" target="_blank">GitHub</a>
+        <a href="#" target="_blank">Live Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <div
-      class="text-[20px] p-2 px-4 flex items-center font-bold w-full h-[50px] sticky top-0 left-0 backdrop-blur-md"
-    >
-      Projects
-    </div>
-    <div class="flex mb-10 flex-col gap-2 max-w-[400px] m-auto px-4 mt-2 mb-6">
-      <div
-        class="p-4 border-dashed border-4 text-center rounded-md bg-gray-100 animate-pulse dark:bg-gray-800"
-      >
-        <span class="animate-pulse">Will be available soon! 🚀</span>
-      </div>
-    </div>
+<!-- Skills Section -->
+<section class="max-w-[600px] mx-auto px-4 mb-10">
+  <h2 class="text-xl font-bold mb-2">Tech Stack</h2>
+  <div class="grid grid-cols-3 gap-4 text-center text-sm">
+    <div><i data-lucide="code"></i><p>HTML</p></div>
+    <div><i data-lucide="css3"></i><p>CSS</p></div>
+    <div><i data-lucide="file-js"></i><p>JavaScript</p></div>
+    <div><i data-lucide="typescript"></i><p>TypeScript</p></div>
+    <div><i data-lucide="php"></i><p>PHP</p></div>
+    <div><i data-lucide="database"></i><p>MySQL</p></div>
+    <div><i data-lucide="server"></i><p>Node.js</p></div>
+    <div><i data-lucide="layout"></i><p>Laravel</p></div>
+    <div><i data-lucide="layers"></i><p>Tailwind</p></div>
+  </div>
+</section>
 
-    <footer
-      class="px-4 flex flex-row items-center justify-center max-w-[400px] mx-auto my-5"
-    >
-      <div class="">
-        Less <span class="font-bold">JavaScript</span>, more
-        <span class="font-bold">TypeScript</span>, because debugging should be
-        optional.
-      </div>
-    </footer>
+<!-- Footer -->
+<footer id="contact" class="text-center text-sm mt-10 mb-5">
+  <p>Built with ❤️ by Abdulrahaman Sahabi</p>
+  <div class="mt-2 flex justify-center gap-3 text-blue-500">
+    <a href="mailto:asahabi.developer@gmail.com">Email</a>
+    <a href="https://github.com/" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+  </div>
+</footer>
 
-    <script src="./public/js/app.js"></script>
+<script>
+  lucide.createIcons();
+
+  const sidebar = document.getElementById('sidebar');
+  const menu = document.getElementById('menu');
+  const close = document.getElementById('close');
+
+  menu.addEventListener('click', () => {
+    sidebar.classList.remove('hidden');
+    document.body.classList.add('noscroll');
+  });
+
+  close.addEventListener('click', () => {
+    sidebar.classList.add('hidden');
+    document.body.classList.remove('noscroll');
+  });
+</script>
+
   </body>
 </html>
