@@ -1,154 +1,225 @@
-<!DOCTYPE html><html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abdulrahaman Sahabi | Full-Stack Developer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-      body.noscroll {
-        overflow: hidden;
-      }
-    </style>
+    <link rel="stylesheet" href="public/css/global.css" />
+    <link rel="manifest" href="/manifest.json" />
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest"></script>
   </head>
-  <body class="bg-stone-50 dark:bg-primary dark:text-gray-300 text-gray-600 text-sm">
-    <header class="sticky top-0 z-50 w-full h-[50px] px-6 py-1 flex items-center justify-between backdrop-blur-sm">
-      <button id="menu" class="dark:hover:bg-stone-600 hover:bg-stone-200 p-1 rounded transition">
-        <i data-lucide="menu" class="w-5 h-5"></i>
-      </button>
-      <div class="flex gap-3 items-center">
-        <button id="light-mode" class="dark:hover:bg-stone-600 hover:bg-stone-200 p-1 rounded transition">
-          <i data-lucide="sun" class="w-5 h-5"></i>
+  <body
+    class="bg-stone-50 relative dark:bg-primary text-gray-600 dark:text-gray-300 text-sm md:text-base select-none"
+  >
+    <aside
+      id="sidebar"
+      class="fixed inset-0 z-50 transform -translate-x-full transition-transform duration-300 ease-in-out bg-stone-50 dark:bg-primary md:hidden"
+    >
+      <div class="flex flex-col h-full p-6">
+        <button id="close" class="self-end p-2 dark:hover:bg-stone-600 hover:bg-stone-200 rounded-lg">
+          <i data-lucide="x" class="size-6"></i>
         </button>
-        <button id="dark-mode" class="dark:hover:bg-stone-600 hover:bg-stone-200 p-1 rounded transition hidden">
-          <i data-lucide="moon" class="w-5 h-5"></i>
-        </button>
-        <span>|</span>
-        <a href="mailto:asahabi.developer@gmail.com?subject=Hiring Inquiry" class="text-gray-500 hover:text-gray-700 font-mono text-sm">Hire Me</a>
+        <nav class="flex flex-col items-center justify-center flex-grow space-y-6 text-xl font-bold">
+          <a href="#about" class="hover:text-primary dark:hover:text-amber-300 transition-colors">About</a>
+          <a href="#projects" class="hover:text-primary dark:hover:text-amber-300 transition-colors">Projects</a>
+          <a href="#contact" class="hover:text-primary dark:hover:text-amber-300 transition-colors">Contact</a>
+        </nav>
       </div>
-    </header><!-- Sidebar -->
-<div id="sidebar" class="fixed inset-0 hidden bg-black bg-opacity-60 z-50">
-  <div class="w-full h-full flex justify-center items-center">
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-xl w-[90%] max-w-md text-center">
-      <button id="close" class="text-gray-500 hover:text-red-500 flex justify-end w-full">
-        <i data-lucide="x" class="w-6 h-6"></i>
+    </aside>
+
+    <header
+      class="sticky top-0 left-0 right-0 z-40 backdrop-blur-sm h-[50px] px-6 py-1 w-full flex items-center justify-between"
+    >
+      <button
+        id="menu"
+        class="md:hidden dark:hover:bg-stone-600 hover:bg-stone-200 transform duration-500 cursor-pointer p-1 hover:rounded-lg"
+      >
+        <i data-lucide="menu" class="size-5"></i>
       </button>
-      <ul class="mt-6 space-y-4">
-        <li><a href="#" class="text-lg font-bold">My Resume</a></li>
-        <li><a href="#projects" class="text-lg font-bold">Projects</a></li>
-        <li><a href="#contact" class="text-lg font-bold">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- Hero Section -->
-<section class="max-w-[600px] mx-auto my-10 p-4 text-center">
-  <h1 class="text-3xl font-bold text-gray-800 dark:text-white">Abdulrahaman Sahabi</h1>
-  <p class="text-red-500 font-semibold">Full-Stack Developer</p>
-  <div class="mt-4 w-48 h-48 mx-auto rounded-full overflow-hidden">
-    <img src="./public/assets/my image 2.jpg" alt="My image" class="object-cover w-full h-full" />
-  </div>
-</section>
-
-<!-- About Section -->
-<section class="max-w-[600px] mx-auto px-4 mb-10">
-  <h2 class="text-xl font-bold mb-2">About</h2>
-  <p class="leading-6">
-    I’m a <strong>Full-Stack Developer</strong> passionate about transforming ideas into <strong>fast, user-friendly, and secure web applications</strong> using <strong>JavaScript, TypeScript, PHP, Next.js, Laravel, React, and Node.js</strong>.
-    I specialize in crafting smooth front-end interfaces with <strong>TailwindCSS</strong> and powerful back-ends with <strong>MySQL, MongoDB, and API integrations</strong>.
-    Let’s create something awesome together!
-  </p>
-</section>
-
-<!-- Experience Section -->
-<section class="max-w-[600px] mx-auto px-4 mb-10">
-  <h2 class="text-xl font-bold mb-2">Experience</h2>
-  <div class="space-y-6">
-    <div>
-      <h3 class="font-bold">Full-Stack Developer – Personal Projects</h3>
-      <p class="text-xs">Remote | 2024 - Present</p>
-      <p>Built full-stack systems using Laravel, Next.js, Node.js, and TailwindCSS with clean and functional UI/UX.</p>
-    </div>
-    <div>
-      <h3 class="font-bold">Developer – InoGr Technologies</h3>
-      <p class="text-xs">Remote | 2024 - Present</p>
-      <p>Contributed to internal tools and student apps like CGPA Tracker, improving functionality and performance.</p>
-    </div>
-    <div>
-      <h3 class="font-bold">Mentor – WUFP/BK</h3>
-      <p class="text-xs">Nigeria | National Diploma Period</p>
-      <p>Guided colleagues with debugging and coding best practices while simplifying complex programming topics.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Projects Section -->
-<section id="projects" class="max-w-[600px] mx-auto px-4 mb-10">
-  <h2 class="text-xl font-bold mb-2">Projects</h2>
-  <div class="space-y-4">
-    <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
-      <h3 class="font-semibold">FUBK CGPA Tracker</h3>
-      <p class="text-sm">Web and mobile app for tracking CGPA, simulating grades, and comparing progress. Built with PHP, MySQL, TailwindCSS.</p>
-      <div class="mt-2 text-xs text-blue-500 flex gap-4">
-        <a href="#" target="_blank">GitHub</a>
-        <a href="#" target="_blank">Live Demo</a>
+      <nav class="hidden md:flex gap-6 items-center">
+        <a href="#about" class="hover:text-primary dark:hover:text-amber-300 transition-colors">About</a>
+        <a href="#projects" class="hover:text-primary dark:hover:text-amber-300 transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-primary dark:hover:text-amber-300 transition-colors">Contact</a>
+      </nav>
+      <div class="flex gap-3 items-center ml-auto">
+        <button
+          id="light-mode"
+          class="dark:hover:bg-stone-600 hover:bg-stone-200 transform duration-500 cursor-pointer p-1 hover:rounded-lg hidden"
+        >
+          <i data-lucide="sun" class="size-5"></i>
+        </button>
+        <button
+          id="dark-mode"
+          class="dark:hover:bg-stone-600 hover:bg-stone-200 transform duration-500 cursor-pointer p-1 hover:rounded-lg"
+        >
+          <i data-lucide="moon" class="size-5"></i>
+        </button>
       </div>
-    </div>
-    <div class="bg-white dark:bg-gray-900 p-4 rounded-lg shadow">
-      <h3 class="font-semibold">Student Admission Portal</h3>
-      <p class="text-sm">Dynamic portal for handling student admissions, admin dashboards, and secure OTP login. Built with PHP, JS, and Tailwind.</p>
-      <div class="mt-2 text-xs text-blue-500 flex gap-4">
-        <a href="#" target="_blank">GitHub</a>
-        <a href="#" target="_blank">Live Demo</a>
+    </header>
+
+    <main class="container mx-auto px-4 md:px-6">
+      <section id="about" class="py-12 md:py-24 text-center">
+        <img
+          id="my-image"
+          src="./public/assets/my image 1.jpg"
+          loading="lazy"
+          alt="Abdulrahaman Sahabi"
+          class="rounded-full w-32 h-32 mx-auto mb-4 object-cover"
+        />
+        <h1 class="text-3xl md:text-5xl font-bold mb-2 text-primary dark:text-amber-300">Abdulrahaman Sahabi</h1>
+        <p class="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-6">Full-Stack Developer</p>
+        <p class="max-w-2xl mx-auto mb-8">
+          A passionate and dedicated Full-Stack Developer with a knack for building robust and scalable web applications. I specialize in both front-end and back-end technologies, creating seamless and user-friendly digital experiences.
+        </p>
+        <a
+          href="./Abdulrahaman_CV.pdf"
+          download
+          class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-light transition-colors"
+        >
+          <i data-lucide="download" class="size-4 mr-2"></i> Download CV
+        </a>
+      </section>
+
+      <hr class="border-gray-200 dark:border-gray-700" />
+
+      <section id="tech-stack" class="py-12 md:py-24">
+        <h2 class="text-2xl font-bold text-center mb-6">My Tech Stack</h2>
+        <div class="max-w-[600px] mx-auto grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 text-center">
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="book" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">HTML</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="palette" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">CSS</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="sparkles" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">JavaScript</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="type" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">TypeScript</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="code" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">PHP</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="database" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">MySQL</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="feather" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">Laravel</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="server" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">Node.js</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="react" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">React</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="terminal" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">Next.js</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="wind" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">TailwindCSS</span>
+          </div>
+          <div class="flex flex-col items-center p-3 rounded-lg hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+            <i data-lucide="leaf" class="size-8 mb-1 text-primary dark:text-amber-300"></i>
+            <span class="text-xs">MongoDB</span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="border-gray-200 dark:border-gray-700" />
+
+      <section id="projects" class="py-12 md:py-24">
+        <h2 class="text-2xl font-bold text-center mb-8">My Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-stone-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+            <img src="https://via.placeholder.com/400x250" alt="Project 1" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Project Title 1</h3>
+              <p class="text-gray-500 dark:text-gray-400 mb-4">A brief description of the project, highlighting its purpose and the technologies used.</p>
+              <div class="flex gap-2 mb-4">
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">React</span>
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">Next.js</span>
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">TailwindCSS</span>
+              </div>
+              <a
+                href="#"
+                target="_blank"
+                class="inline-flex items-center text-primary dark:text-amber-300 hover:underline"
+              >
+                View Project <i data-lucide="arrow-right" class="size-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-stone-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+            <img src="https://via.placeholder.com/400x250" alt="Project 2" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Project Title 2</h3>
+              <p class="text-gray-500 dark:text-gray-400 mb-4">A brief description of the project, highlighting its purpose and the technologies used.</p>
+              <div class="flex gap-2 mb-4">
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">PHP</span>
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">Laravel</span>
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">MySQL</span>
+              </div>
+              <a
+                href="#"
+                target="_blank"
+                class="inline-flex items-center text-primary dark:text-amber-300 hover:underline"
+              >
+                View Project <i data-lucide="arrow-right" class="size-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+          <div class="bg-white dark:bg-stone-800 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105">
+            <img src="https://via.placeholder.com/400x250" alt="Project 3" class="w-full h-48 object-cover" />
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Project Title 3</h3>
+              <p class="text-gray-500 dark:text-gray-400 mb-4">A brief description of the project, highlighting its purpose and the technologies used.</p>
+              <div class="flex gap-2 mb-4">
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">Node.js</span>
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">Express</span>
+                <span class="bg-gray-200 dark:bg-stone-700 text-xs px-2 py-1 rounded-full">MongoDB</span>
+              </div>
+              <a
+                href="#"
+                target="_blank"
+                class="inline-flex items-center text-primary dark:text-amber-300 hover:underline"
+              >
+                View Project <i data-lucide="arrow-right" class="size-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <hr class="border-gray-200 dark:border-gray-700" />
+
+    <footer id="contact" class="text-center py-10 text-sm">
+      <p class="mb-2">Built with <span class="text-red-500">❤️</span> by Abdulrahaman Sahabi</p>
+      <div class="flex justify-center gap-3 mt-2">
+        <a href="mailto:asahabi.developer@gmail.com" class="hover:text-primary dark:hover:text-amber-300 transition-colors">
+          <i data-lucide="mail" class="size-5"></i>
+        </a>
+        <a href="https://github.com/yourhandle" target="_blank" class="hover:text-primary dark:hover:text-amber-300 transition-colors">
+          <i data-lucide="github" class="size-5"></i>
+        </a>
+        <a href="https://linkedin.com/in/yourname" target="_blank" class="hover:text-primary dark:hover:text-amber-300 transition-colors">
+          <i data-lucide="linkedin" class="size-5"></i>
+        </a>
       </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- Skills Section -->
-<section class="max-w-[600px] mx-auto px-4 mb-10">
-  <h2 class="text-xl font-bold mb-2">Tech Stack</h2>
-  <div class="grid grid-cols-3 gap-4 text-center text-sm">
-    <div><i data-lucide="code"></i><p>HTML</p></div>
-    <div><i data-lucide="css3"></i><p>CSS</p></div>
-    <div><i data-lucide="file-js"></i><p>JavaScript</p></div>
-    <div><i data-lucide="typescript"></i><p>TypeScript</p></div>
-    <div><i data-lucide="php"></i><p>PHP</p></div>
-    <div><i data-lucide="database"></i><p>MySQL</p></div>
-    <div><i data-lucide="server"></i><p>Node.js</p></div>
-    <div><i data-lucide="layout"></i><p>Laravel</p></div>
-    <div><i data-lucide="layers"></i><p>Tailwind</p></div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer id="contact" class="text-center text-sm mt-10 mb-5">
-  <p>Built with ❤️ by Abdulrahaman Sahabi</p>
-  <div class="mt-2 flex justify-center gap-3 text-blue-500">
-    <a href="mailto:asahabi.developer@gmail.com">Email</a>
-    <a href="https://github.com/" target="_blank">GitHub</a>
-    <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
-  </div>
-</footer>
-
-<script>
-  lucide.createIcons();
-
-  const sidebar = document.getElementById('sidebar');
-  const menu = document.getElementById('menu');
-  const close = document.getElementById('close');
-
-  menu.addEventListener('click', () => {
-    sidebar.classList.remove('hidden');
-    document.body.classList.add('noscroll');
-  });
-
-  close.addEventListener('click', () => {
-    sidebar.classList.add('hidden');
-    document.body.classList.remove('noscroll');
-  });
-</script>
-
+    <script src="./public/js/main.js"></script>
   </body>
 </html>
