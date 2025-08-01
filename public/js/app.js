@@ -1,50 +1,61 @@
+
+// public/js/main.js
+
 "use strict";
-var darkBtn = document.querySelector("#dark-mode");
-var lightBtn = document.querySelector("#light-mode");
-var body = document.querySelector("body");
-var menuBtn = document.querySelector("#menu");
-var closeBtn = document.querySelector("#close");
-var sidebar = document.querySelector("#sidebar");
-var myImage = document.querySelector("#my-image") ||
-    null;
-var isDark = localStorage.getItem("theme");
-if (isDark === null || isDark == "dark") {
-    document.documentElement.classList.toggle("dark");
+
+// Initialize Lucide icons
+lucide.createIcons();
+
+// DOM elements
+const darkBtn = document.getElementById("dark-mode");
+const lightBtn = document.getElementById("light-mode");
+const menuBtn = document.getElementById("menu");
+const closeBtn = document.getElementById("close");
+const sidebar = document.getElementById("sidebar");
+const myImage = document.getElementById("my-image");
+const html = document.documentElement;
+
+// Theme toggle functionality
+const setTheme = (theme) => {
+  if (theme === "dark") {
+    html.classList.add("dark");
+    lightBtn.classList.remove("hidden");
+    darkBtn.classList.add("hidden");
+  } else {
+    html.classList.remove("dark");
+    lightBtn.classList.add("hidden");
+    darkBtn.classList.remove("hidden");
+  }
+  localStorage.setItem("theme", theme);
+};
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") {
+  setTheme("light");
+} else {
+  // Default to dark theme or saved dark theme
+  setTheme("dark");
 }
-else {
-    lightBtn === null || lightBtn === void 0 ? void 0 : lightBtn.classList.add("hidden");
-    darkBtn === null || darkBtn === void 0 ? void 0 : darkBtn.classList.remove("hidden");
-    document.documentElement.classList.toggle("light");
-}
-if (darkBtn && lightBtn) {
-    darkBtn.addEventListener("click", function () {
-        document.documentElement.classList.toggle("dark");
-        lightBtn === null || lightBtn === void 0 ? void 0 : lightBtn.classList.remove("hidden");
-        darkBtn === null || darkBtn === void 0 ? void 0 : darkBtn.classList.add("hidden");
-        localStorage.setItem("theme", "dark");
-    });
-    lightBtn.addEventListener("click", function () {
-        document.documentElement.classList.toggle("dark");
-        lightBtn === null || lightBtn === void 0 ? void 0 : lightBtn.classList.add("hidden");
-        darkBtn === null || darkBtn === void 0 ? void 0 : darkBtn.classList.remove("hidden");
-        localStorage.setItem("theme", "light");
-    });
-}
-if (menuBtn && sidebar && closeBtn) {
-    menuBtn.addEventListener("click", function (e) {
-        sidebar === null || sidebar === void 0 ? void 0 : sidebar.classList.toggle("hidden");
-    });
-    closeBtn.addEventListener("click", function (e) {
-        sidebar === null || sidebar === void 0 ? void 0 : sidebar.classList.toggle("hidden");
-    });
-}
+
+darkBtn.addEventListener("click", () => setTheme("light"));
+lightBtn.addEventListener("click", () => setTheme("dark"));
+
+// Sidebar menu functionality
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.remove("-translate-x-full");
+});
+
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.add("-translate-x-full");
+});
+
+// Optional: Image hover effect
 if (myImage) {
-    myImage.addEventListener("mouseenter", function () {
-        if (document.documentElement.classList.contains("dark")) {
-            myImage.src = "./public/assets/my image 1.jpg";
-        }
-    });
-    myImage.addEventListener("mouseleave", function () {
-        myImage.src = "./public/assets/my image 2.jpg";
-    });
+  myImage.addEventListener("mouseenter", () => {
+    myImage.src = "./public/assets/my image 2.jpg";
+  });
+  myImage.addEventListener("mouseleave", () => {
+    myImage.src = "./public/assets/my image 1.jpg";
+  });
 }
